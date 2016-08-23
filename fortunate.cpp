@@ -8,12 +8,12 @@ std::vector<int> num;
 std::vector<int> val;
 int n;
 int nxt[1005];
-int dfs(int i, int s, int p){
+int dfs(int i, int s, int p){//寻找可能性组合
     if(i >= n) 
 	{
 		return s > p;
 	}
-	if(val[i] > 1 && s < p) 
+	if(val[i] > 1 && s < p) //和小于积则返回
 	{
 		return 0;
 	}
